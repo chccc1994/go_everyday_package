@@ -351,13 +351,13 @@ docker pull 镜像名字[:TAG]
 
 有镜像才能创建容器，这是根本前提(下载一个Centos镜像演示)
 ```docker
-​	docker pull centos
+​docker pull centos
 ```
 #### 新建并启动容器
 ```docker
-​	docker run [OPTIONS] IMAGE [COMMAND][ARG]
+​docker run [OPTIONS] IMAGE [COMMAND][ARG]
 ```
-​	OPTIONS 说明 
+​OPTIONS 说明 
 
 ```do
 OPTIONS说明(常用) :有些是一个减号，有些是两个减号
@@ -399,11 +399,11 @@ OPTIONS说明(常用) :
 #### 退出容器
 
 两种退出方式
-
+```docker
 ​	exit 容器停止退出
 
 ​	ctrl+P+Q 容器不停止退出
-
+```
 #### 启动容器
 
 docker start 容器ID或容器签名
