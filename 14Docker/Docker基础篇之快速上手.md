@@ -315,11 +315,11 @@ docker --help
 
 #### docker search 某个XXX镜像的名字
 
-​	网站 www.dockerhub.com
+​网站 www.dockerhub.com
 
-​	docker search [OPTIONS] 镜像名字
+​docker search [OPTIONS] 镜像名字
 
-​	OPTIONS 说明
+​OPTIONS 说明
 
 ```dockerfile
 --no-trun 显示完整的镜像描述
@@ -399,8 +399,8 @@ OPTIONS说明(常用) :
 #### 退出容器
 
 两种退出方式
-```docker
-​	exit 容器停止退出
+```do
+	exit 容器停止退出
 
 ​	ctrl+P+Q 容器不停止退出
 ```
