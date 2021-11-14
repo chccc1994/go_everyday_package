@@ -45,6 +45,7 @@ func (x *SearchRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
+//proto.Message 的接口
 func (*SearchRequest) ProtoMessage() {}
 
 func (x *SearchRequest) ProtoReflect() protoreflect.Message {

@@ -11,3 +11,26 @@ Protocol Buffers 是一种与语言、平台无关，可扩展的序列化结构
     解析速度是原来的 20 倍至 100 倍
     减少了二义性
     生成了更易使用的数据访问类
+
+
+```go
+//gRPC插件会为服务端和客户端生成不同的接口
+func RegisterSearchServiceServer(s *grpc.Server, srv SearchServiceServer) {
+	s.RegisterService(&_SearchService_serviceDesc, srv)
+}
+
+func NewSearchServiceClient(cc grpc.ClientConnInterface) SearchServiceClient {
+	return &searchServiceClient{cc}
+}
+```
+#### 为什么不用 Simple RPC
+
+流式为什么要存在呢，是 Simple RPC 有什么问题吗？通过模拟业务场景，可得知在使用 Simple RPC 时，有如下问题：
+
++ 数据包过大造成的瞬时压力
++ 接收数据包时，需要所有数据包都接受成功且正确后，才能够回调响应，进行业务处理（无法客户端边发送，服务端边处理）
+
+为什么用 Streaming RPC?
+
++ 大规模数据包
++ 实时场景

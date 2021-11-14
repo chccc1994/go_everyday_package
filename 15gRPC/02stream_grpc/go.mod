@@ -1,4 +1,4 @@
-module go_everyday_package/15gRPC/01protoc
+module go_everyday_package/15gRPC/02stream_grpc
 
 go 1.17
 
